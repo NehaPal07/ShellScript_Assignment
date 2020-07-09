@@ -1,0 +1,25 @@
+Create a simple script containing a single function. 
+This function should display a message to clearly indicate it was generated when the function was run. 
+Then, display another message outside the function clearly indicating it was generated outside of it.
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment21.sh
+
+#!/usr/bin/bash
+
+Test () {
+
+  echo "I am Inside at function"
+
+}
+
+Test
+
+echo "I am at Outside of the function"
+
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment21.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment21.sh
+I am Inside at function
+I am at Outside of the function

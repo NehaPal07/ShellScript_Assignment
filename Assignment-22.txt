@@ -1,0 +1,28 @@
+Create a script to demonstrate the visibility of variables and when they are available within a script and 
+its functions. Define a global variable, a function that defines a local variable and then display both BEFORE 
+calling the function, call the function, then display both AFTER calling the function.
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment22.sh
+
+#!/bin/sh
+
+var1=20
+
+# Define your function here
+Hello () {
+   var=Neha
+   echo "Value of Local Variable"
+   echo "Hello $var in the world of Scripting"
+}
+
+# Invoke your function
+Hello
+
+echo "Value of Global Variable : " $var1
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment22.sh
+Value of Local Variable
+Hello Neha in the world of Scripting
+Value of Global Variable :  20
