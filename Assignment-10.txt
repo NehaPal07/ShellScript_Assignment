@@ -1,0 +1,16 @@
+Create a script that, when run, will accept two command line values as arguments. 
+These arguments should be a username and password and assigned to two variables in the script named appropriately.
+Finally, echo those values out to the terminal when run to indicate they were read and assigned as expected.
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment10.sh
+
+#!/usr/bin/bash
+
+echo "Username is : $1"
+echo "Password is : $2"
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment10.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment10.sh Neha neha
+Username is : Neha
+Password is : neha

@@ -1,0 +1,45 @@
+Develop a simple three item menu to display on the terminal. Your script, upon display of the menu, 
+should prompt the user to choose one of the three available options. Using the 'case' statement from the course, 
+display three unique messages depending on which number they chose, with a catch all message letting them know if 
+they went outside the bounds of instructions.
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$  vi Assignment14.sh
+
+#!/bin/sh
+
+echo "Please choose one of the option"
+read -p  " 1. Sport 2. Fruit 3. Color " INPUT_STRING
+
+while :
+do
+   case $INPUT_STRING in
+        1)
+                echo "Hello your choose cricket!"
+                break
+                ;;
+        2)
+                echo "See you again with your favourite fruit, Apple!"
+                break
+                ;;
+        3)
+                echo "your love for blue color !"
+                break
+                ;;
+
+        *)
+                echo "Sorry, I don't understand"
+                break
+                ;;
+  esac
+done
+echo
+echo "That's all folks!"
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$  chmod u+x Assignment14.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment14.sh
+Please choose one of the option
+ 1. Sport 2. Fruit 3. Color 2
+See you again with your favourite fruit, Apple!
+
+That's all folks!

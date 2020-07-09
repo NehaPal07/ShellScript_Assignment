@@ -1,0 +1,19 @@
+Create a simple script that does the following:
+
+Echo a full sentence to the terminal
+Echo a different full sentence, but redirect it to /dev/null
+
+Run and display the results and make sure the statements appear where intended.
+
+
+Solution:
+ec2-user@ip-172-31-34-178 shell_Assignments]$ vi assignment04.sh
+#!/usr/bin/bash
+
+echo "what is your name"
+
+echo "my name is Neha "  > /dev/null
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x assignment04.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./assignment04.sh
+what is your name

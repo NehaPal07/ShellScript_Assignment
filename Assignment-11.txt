@@ -1,0 +1,36 @@
+Create a script that interacts with the user. Prompt them to guess a secret number between 1 and 5. 
+Read the guess from the terminal and assign it to a variable. 
+Using the 'if' statement from the course, test that value to determine if they guessed the right number 
+(you choose the correct value). If they do, display a success message, otherwise do nothing.
+
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment11.sh
+#!/usr/bin/bash
+a=1
+b=2
+c=3
+e=4
+f=5
+
+read -p "Guess the secret number between 1 to 5 :" num
+
+echo "Number is : $num"
+
+for var in $num;
+do
+if [ "$var" = "$a" ] || [ "$var" = "$b" ] || [ "$var" = "$c" ] || [ "$var" = "$d" ] || [ "$var" = "$e" ] || [ "$var" = "$f" ]; then
+   echo "number is correct"
+else
+   echo "number is not correct"
+fi
+
+done
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment11.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment11.sh
+Guess the secret number between 1 to 5 :4
+Number is : 4
+number is correct
+

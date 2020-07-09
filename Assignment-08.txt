@@ -1,0 +1,30 @@
+Create a script that interacts with the user. You will want to prompt the user to enter the 
+following information (which you will capture and place into the following variables):
+
+FIRSTNAME
+LASTNAME
+USERAGE
+
+Greet the user with their name and current age displayed and then calculate and display their age in 10 years.
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment08.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment08.sh
+
+#!/usr/bin/bash
+
+read -p "your firstname: " FIRSTNAME
+read -p "your lastname:  " LASTNAME
+read -p "your age     :  " USERAGE
+
+echo "Hi $FIRSTNAME $LASTNAME and welcome in the world of unix !!"
+
+cal=`expr $USERAGE + 10`
+
+echo "$FIRSTNAME will be $cal after 10 years"
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment08.sh
+your firstname: Neha
+your lastname:  Pal
+your age     :  26
+Hi Neha Pal and welcome in the world of unix !!
+Neha will be 36 after 10 years

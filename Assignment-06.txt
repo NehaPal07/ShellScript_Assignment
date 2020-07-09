@@ -1,0 +1,28 @@
+Write a script that evaluates and displays the following arithmetic operations:
+
+Add two numbers
+Add two numbers and multiply by a third, do not group anything 
+Add two numbers, grouped (changing order of precedence) and multiply by a third
+
+Keep in mind special characters and/or escape characters as needed.
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment06.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment06.sh
+#!/usr/bin/bash
+
+a=10
+b=20
+c=30
+
+val=`expr $a + $b \* $c`
+
+echo "a + b * c : $val"
+
+
+echo "(a+b)*c : $(((a+b) * c))"
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment06.sh
+a + b * c : 610
+(a+b)*c : 900

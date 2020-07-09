@@ -1,0 +1,60 @@
+Write a script that will use command substitution to dynamically set variable values:
+
+TODAYSDATE - should contain date/time stamp when executed
+USERFILES - the results of a find run on the /home directory to list all files owned by 'user' account
+
+
+Additionally, set two aliases:
+
+TODAY - should be an alias for the 'date' command
+UFILES - should be an alias to the full command used to set the variable USERFILES above
+
+Finally, display all variables and alias values when the script is run.
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment07.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment07.sh
+#!/usr/bin/bash
+
+TODAYSDATE=`date`
+echo "Date is $TODAYSDATE"
+
+USERFILES=`find /home/ec2-user -user ec2-user`
+
+echo "user is $USERFILES"
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment07.sh
+Date is Thu Jul  9 10:42:26 UTC 2020
+user is /home/ec2-user
+/home/ec2-user/.bash_logout
+/home/ec2-user/.bash_profile
+/home/ec2-user/.bashrc
+/home/ec2-user/.ssh
+/home/ec2-user/.ssh/authorized_keys
+/home/ec2-user/Neha
+/home/ec2-user/Neha/test.txt
+/home/ec2-user/Neha/.hw.sh.swp
+/home/ec2-user/Neha/neha27.txt
+/home/ec2-user/Neha/ostechnix.tar
+/home/ec2-user/Neha/1.txt
+/home/ec2-user/Neha/2.txt
+/home/ec2-user/Neha/23Neha.txt
+/home/ec2-user/Neha/shell_Assignments
+/home/ec2-user/Neha/shell_Assignments/1
+/home/ec2-user/Neha/shell_Assignments/Assignment01.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment03.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment02.sh
+/home/ec2-user/Neha/shell_Assignments/assignment04.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment05.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment06.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment07.sh
+/home/ec2-user/Neha/shell_Assignments/notes.txt
+/home/ec2-user/Neha/notes.txt
+/home/ec2-user/Neha/1
+/home/ec2-user/Neha/hw.sh
+/home/ec2-user/.bash_history
+/home/ec2-user/1
+/home/ec2-user/notes.txt
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ alias Today=`date`
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ alias UFILES=`find /home/ec2-user -user ec2-user`

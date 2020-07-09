@@ -1,0 +1,32 @@
+Write a script that assigns a variable that contains a list of all shell scripts (*.sh) in the current directory 
+(command redirection). Using the 'for'statement from the course, iterate through that list of files and display 
+the filename of each and cat out the contents to the terminal.
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment13.sh
+
+#!/usr/bin/bash
+
+FILES=`find /home/ec2-user -name "*.sh"` >> Files.txt
+
+for var in $FILES
+do
+ echo $var
+done
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment13.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment13.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment01.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment10.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment11.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment13.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment03.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment02.sh
+/home/ec2-user/Neha/shell_Assignments/assignment04.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment05.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment06.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment07.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment08.sh
+/home/ec2-user/Neha/shell_Assignments/Assignment09.sh
+/home/ec2-user/Neha/hw.sh

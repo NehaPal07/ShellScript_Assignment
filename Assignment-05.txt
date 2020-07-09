@@ -1,0 +1,38 @@
+Write a script that runs three commands:
+
+Evaluate an arithmetic expression
+Attempt to remove a file that does not exist in the current directory
+Evaluate another arithmetic expression
+
+
+Immediately after each command, 
+echo the exit status of that command to the terminal using the appropriate variable 
+to show success and failure exit codes.
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment05.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment05.sh
+#!/usr/bin/bash
+
+a=10
+b=20
+
+val=`expr $a + $b`
+
+echo "a + b : $val"
+
+echo $?
+
+val=`expr $a \* $b`
+
+echo "a * b : $val"
+
+echo $?
+
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment05.sh
+a + b : 30
+0
+a * b : 200
+0

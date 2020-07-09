@@ -1,0 +1,31 @@
+Create a simple text file containing a list of super heros (or some names if preferred), use at least four values, one per line in the file.
+
+Write a bash shell script that then reads that file and displays it line by line on the terminal window.
+
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi hero.txt
+
+Bhagat Singh
+Sukhdev
+Subash Chandra Bose
+Raja Ram
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment16.sh
+
+#!/bin/bash
+filename='hero.txt'
+n=1
+while read line; do
+# reading each line
+echo "Line No. $n : $line"
+n=$((n+1))
+done < $filename
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment16.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment16.sh
+Line No. 1 : Bhagat Singh
+Line No. 2 : Sukhdev
+Line No. 3 : Subash Chandra Bose
+Line No. 4 : Raja Ram
+
