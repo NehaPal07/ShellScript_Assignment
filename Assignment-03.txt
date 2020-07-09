@@ -1,0 +1,22 @@
+Develop a script that creates, sets and displays two variables to the terminal when run. 
+Within this script, add comments to explain what the script is doing, what each variable is and, 
+using inline comments, what each command is doing.
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment03.sh
+     1  #!/usr/bin/bash
+     2  # declare and assignment of the variable
+
+     3  a=10;
+     4  b=10;
+
+     5  #Print the variable value
+
+     6  echo 'value of A : ' $a
+     7  echo 'value of B : ' $b
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment03.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment03.sh
+value of A :  10
+value of B :  10
+
+

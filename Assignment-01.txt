@@ -1,0 +1,24 @@
+Create a script that, when run, will display the following environment variables to the console:
+
+USER
+HOME
+HISTCONTROL
+TERM
+
+Solution:
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ vi Assignment01.sh
+#!/usr/bin/bash
+
+echo $USER
+echo $HOME
+echo $HISTCONTROL
+echo $TERM
+
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ chmod u+x Assignment01.sh
+[ec2-user@ip-172-31-34-178 shell_Assignments]$ ./Assignment01.sh
+ec2-user
+/home/ec2-user
+ignoredups
+xterm
+
+
