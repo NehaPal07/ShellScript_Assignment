@@ -1,0 +1,6 @@
+$#- tells the no. of arguments passed in the scripts
+$0- gives you the script file name
+$?- tells you whether your previous command executed correctly or not
+tail -1 filename -- gets the last line from the file
+head -1 filename -- gets the first line from the file
+echo $$ -- Print the current PID
